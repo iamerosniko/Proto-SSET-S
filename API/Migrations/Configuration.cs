@@ -7,7 +7,6 @@ namespace API.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-
         }
 
         protected override void Seed(API.Entities.SkillSetContext context)

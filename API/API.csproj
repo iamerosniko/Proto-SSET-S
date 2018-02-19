@@ -140,7 +140,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\AssociateDepartmentSkillsetsController.cs" />
+    <Compile Include="Controllers\AssociatesController.cs" />
+    <Compile Include="Controllers\DepartmentsController.cs" />
+    <Compile Include="Controllers\DepartmentSkillsetsController.cs" />
+    <Compile Include="Controllers\LocationsController.cs" />
+    <Compile Include="Controllers\SetGroupAccessesController.cs" />
+    <Compile Include="Controllers\SetGroupsController.cs" />
+    <Compile Include="Controllers\SetModulesController.cs" />
+    <Compile Include="Controllers\SetUserAccessesController.cs" />
+    <Compile Include="Controllers\SetUsersController.cs" />
+    <Compile Include="Controllers\SkillsetsController.cs" />
     <Compile Include="Entities\Associate.cs" />
     <Compile Include="Entities\AssociateDepartmentSkillset.cs" />
     <Compile Include="Entities\Department.cs" />
@@ -156,9 +166,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201802191547222_SSInit.cs" />
-    <Compile Include="Migrations\201802191547222_SSInit.Designer.cs">
-      <DependentUpon>201802191547222_SSInit.cs</DependentUpon>
+    <Compile Include="Migrations\201802191626389_SSInit.cs" />
+    <Compile Include="Migrations\201802191626389_SSInit.Designer.cs">
+      <DependentUpon>201802191626389_SSInit.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -186,8 +196,8 @@
     <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201802191547222_SSInit.resx">
-      <DependentUpon>201802191547222_SSInit.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802191626389_SSInit.resx">
+      <DependentUpon>201802191626389_SSInit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
