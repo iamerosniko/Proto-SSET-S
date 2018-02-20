@@ -78,5 +78,11 @@ C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.csprojResolveAs
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.csproj.CoreCompileInputs.cache
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.dll
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.pdb
-C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.Migrations.SSInit.resources
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.Migrations.Initial.resources
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.csproj.GenerateResource.Cache
