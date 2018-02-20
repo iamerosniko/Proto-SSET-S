@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using API.Entities;
+using System;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
-using API.Entities;
 
 namespace API.Controllers
 {
@@ -50,6 +47,8 @@ namespace API.Controllers
                 return BadRequest();
             }
 
+            associate.UpdatedOn = DateTime.Now;
+
             db.Entry(associate).State = EntityState.Modified;
 
             try
@@ -79,6 +78,9 @@ namespace API.Controllers
             {
                 return BadRequest(ModelState);
             }
+
+            associate.IsActive = true;
+            associate.UpdatedOn = DateTime.Now;
 
             db.Associates.Add(associate);
             await db.SaveChangesAsync();
