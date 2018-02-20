@@ -10,6 +10,7 @@ using System.Web.Http.Description;
 
 namespace API.Controllers
 {
+    [Authorize]
     public class AssociatesController : ApiController
     {
         private SkillSetContext db = new SkillSetContext();

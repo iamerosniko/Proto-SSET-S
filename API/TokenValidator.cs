@@ -68,7 +68,7 @@ namespace API
             }
             catch (Exception ex)
             {
-                statusCode = HttpStatusCode.InternalServerError;
+                statusCode = HttpStatusCode.Forbidden;
             }
             return Task<HttpResponseMessage>.Factory.StartNew(() => new HttpResponseMessage(statusCode) { });
         }

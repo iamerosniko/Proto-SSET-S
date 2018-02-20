@@ -9,6 +9,7 @@ using System.Web.Http.Description;
 
 namespace API.Controllers
 {
+    [Authorize]
     public class LocationsController : ApiController
     {
         private SkillSetContext db = new SkillSetContext();

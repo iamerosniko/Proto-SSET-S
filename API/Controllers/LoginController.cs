@@ -12,7 +12,7 @@ namespace API.Controllers
 
         private CurrentUser currentUser;
         public string token;
-        [HttpGet]
+        [HttpPost]
         public IHttpActionResult Authenticate()
         {
             currentUser = new CurrentUser();
