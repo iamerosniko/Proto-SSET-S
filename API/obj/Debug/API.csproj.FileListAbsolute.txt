@@ -86,3 +86,6 @@ C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\bin\Microsoft.IdentityModel.T
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\bin\System.IdentityModel.Tokens.Jwt.xml
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.Migrations.Initial.resources
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.csproj.GenerateResource.Cache
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\bin\System.Web.Cors.dll
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\bin\System.Web.Http.Cors.dll
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\bin\System.Web.Http.Cors.xml
