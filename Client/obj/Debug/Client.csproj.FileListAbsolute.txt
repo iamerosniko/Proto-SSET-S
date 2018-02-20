@@ -46,3 +46,7 @@ C:\Users\zEROSeven\source\repos\SkillsetDatabase\Client\obj\Debug\Client.csprojR
 C:\Users\zEROSeven\source\repos\SkillsetDatabase\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
 C:\Users\zEROSeven\source\repos\SkillsetDatabase\Client\obj\Debug\Client.dll
 C:\Users\zEROSeven\source\repos\SkillsetDatabase\Client\obj\Debug\Client.pdb
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\Client\obj\Debug\Client.dll
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\Client\obj\Debug\Client.pdb
