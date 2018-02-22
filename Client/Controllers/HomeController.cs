@@ -1,5 +1,4 @@
-﻿using System.Collections.Specialized;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Net.Http;
 using System.Web.Mvc;
 
@@ -23,8 +22,8 @@ namespace Client.Controllers
         {
             //request a post to IDP server to gain an AuthToken
             GetAuthentication();
-            NameValueCollection section = (NameValueCollection)ConfigurationManager.GetSection("appSettings");
-            ViewData["homepage"] = section["ClientURL"];
+            var data = ConfigurationSettings.AppSettings["ClientURL"];
+            ViewData["homepage"] = data;
             return View();
         }
 
