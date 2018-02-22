@@ -1,5 +1,4 @@
-﻿using System.Collections.Specialized;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -15,8 +14,8 @@ namespace Client.Controllers
 
         public ApiAccess(string controller)
         {
-            NameValueCollection section = (NameValueCollection)ConfigurationManager.GetSection("WebApiServer");
-            _apiURL = section["ApiURL"];
+            var apiUrl = ConfigurationManager.AppSettings["ApiURL"];
+            _apiURL = apiUrl;
             _apiURL = _apiURL + "/" + controller;
 
             //instantiate client
@@ -37,7 +36,8 @@ namespace Client.Controllers
 
             try
             {
-                var request = await _client.PostAsync(_apiURL, content);
+
+                var request = body != "" ? await _client.PostAsync(_apiURL, content) : await _client.PostAsync(_apiURL, null);
 
                 if (request.IsSuccessStatusCode)
                 {

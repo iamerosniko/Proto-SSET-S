@@ -5,11 +5,11 @@
 
 <h2>SignIn</h2>
 
-
+@ViewData["sample"].ToString().Trim(new char[] { '\"' })
 <script>
-    var homePage = '@ViewData["homepage"].ToString()';
+    @*var homePage = '@ViewData["homepage"].ToString()';
     window.setTimeout(function () {
         window.location.href = homePage ;
-    }, 1500);
+    }, 1500);*@
 
 </script>

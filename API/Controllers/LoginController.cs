@@ -13,7 +13,7 @@ namespace API.Controllers
         private CurrentUser currentUser;
         public string token;
         [HttpPost]
-        public IHttpActionResult Authenticate()
+        public string Authenticate()
         {
             currentUser = new CurrentUser();
             var username = Environment.UserName;
@@ -48,10 +48,9 @@ namespace API.Controllers
             }
             catch
             {
-                return Unauthorized();
+                return "";
             }
-
-            return Ok<string>(token);
+            return token;
         }
 
         private string createToken()

@@ -1,38 +1,51 @@
 ﻿using System.Configuration;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace Client.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : AsyncController
     {
         private string _authToken;
         private HttpClient _client;
         //private TokenFactory _tokenFactory;
         public ActionResult Index()
         {
-            _authToken = Session["authToken"].ToString();
-            if (_authToken == null)
+            var authSession = Session["authToken"];
+            //_authToken = .ToString();
+            if (authSession == null)
             {
                 return Redirect("Home/SignIn");
             }
+            else
+                _authToken = authSession.ToString();
             return View();
         }
-        public ActionResult SignIn()
+        public ViewResult SignIn()
         {
             //request a post to IDP server to gain an AuthToken
             GetAuthentication();
-            var data = ConfigurationSettings.AppSettings["ClientURL"];
+            //var data = ConfigurationSettings.AppSettings["ClientURL"];
+            var data = ConfigurationManager.AppSettings["ClientURL"];
             ViewData["homepage"] = data;
+            ViewData["sample"] = Session["authToken"];
             return View();
         }
 
         public void GetAuthentication()
         {
+            string authToken = "";
             ApiAccess api = new ApiAccess("Login");
+            var asyncTask = Task.Run(() =>
+            {
+                var temp = api.PostRequest("");
+                return temp.Result;
+            });
+            //asyncTask.RunSynchronously();
 
-            var authToken = api.PostRequest("");
-            Session["authToken"] = authToken;
+            authToken = asyncTask.Result;
+            Session["authToken"] = authToken.Trim(new char[] { '\"' });
         }
     }
 }
