@@ -52,6 +52,11 @@ namespace API.Controllers
             }
             return token;
         }
+        [HttpGet]
+        public string sample()
+        {
+            return "im workin";
+        }
 
         private string createToken()
         {

@@ -19,6 +19,7 @@
     <WebStackScaffolding_DbContextTypeFullName>API.Entities.SkillSetContext</WebStackScaffolding_DbContextTypeFullName>
     <_SelectedScaffolderID>ApiControllerWithContextScaffolder</_SelectedScaffolderID>
     <_SelectedScaffolderCategoryPath>root/Common/Web API</_SelectedScaffolderCategoryPath>
+    <NameOfLastUsedPublishProfile>FolderProfile</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

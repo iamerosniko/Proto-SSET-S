@@ -332,6 +332,7 @@
     <Content Include="Scripts\glyphicons-halflings-regular.e18bbf611f2a2e43afc0.ttf" />
     <Content Include="Scripts\glyphicons-halflings-regular.f4769f9bdb7466be6508.eot" />
     <Content Include="Scripts\glyphicons-halflings-regular.fa2772327f55d8198301.woff" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

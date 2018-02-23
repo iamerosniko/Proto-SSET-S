@@ -24,7 +24,7 @@ namespace Client.Controllers
                 _authToken = authSession.ToString();
             return View();
         }
-        public ViewResult SignIn()
+        public ActionResult SignIn()
         {
             //request a post to IDP server to gain an AuthToken
             GetAuthentication();
@@ -46,7 +46,7 @@ namespace Client.Controllers
             });
             //asyncTask.RunSynchronously();
 
-            authToken = asyncTask.Result.Trim(new char[] { '\"' });
+            authToken = asyncTask.Result == null ? "" : asyncTask.Result.Trim(new char[] { '\"' });
             Session["authToken"] = authToken;
             GetCurrentUser(authToken);
         }
