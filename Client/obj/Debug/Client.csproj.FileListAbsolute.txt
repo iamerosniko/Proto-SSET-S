@@ -94,3 +94,9 @@ C:\Users\alverer\Documents\GitHub\Proto-SSET-S\Client\bin\Microsoft.AI.Dependenc
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\Client\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\Client\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\Client\bin\Microsoft.AI.Web.xml
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\Client\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\Client\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\Client\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\Client\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\Client\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\Client\bin\System.IdentityModel.Tokens.Jwt.xml

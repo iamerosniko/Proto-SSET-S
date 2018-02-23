@@ -1,4 +1,6 @@
-﻿using System.Configuration;
+﻿using Client.Models;
+using Newtonsoft.Json;
+using System.Configuration;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Mvc;
@@ -44,8 +46,18 @@ namespace Client.Controllers
             });
             //asyncTask.RunSynchronously();
 
-            authToken = asyncTask.Result;
-            Session["authToken"] = authToken.Trim(new char[] { '\"' });
+            authToken = asyncTask.Result.Trim(new char[] { '\"' });
+            Session["authToken"] = authToken;
+            GetCurrentUser(authToken);
+        }
+
+        public void GetCurrentUser(string token)
+        {
+            UsersController tc = new UsersController();
+            //extract token
+            CurrentUser user = tc.TokenToDetails(token);
+            //save current user
+            Session["currentUser"] = JsonConvert.SerializeObject(user);
         }
     }
 }

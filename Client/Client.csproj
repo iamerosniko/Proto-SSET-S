@@ -50,9 +50,21 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=5.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.5.2.1\lib\net45\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.2.1\lib\net45\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.2.1\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -68,9 +80,6 @@
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http">
     </Reference>
@@ -179,10 +188,12 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\ApiAccess.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CurrentUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -214,6 +225,34 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\3rdpartylicenses.txt" />
+    <Content Include="Scripts\assets\css\bootstrap-3.3.7-dist\css\bootstrap-theme.css" />
+    <Content Include="Scripts\assets\css\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css" />
+    <Content Include="Scripts\assets\css\bootstrap-3.3.7-dist\css\bootstrap.css" />
+    <Content Include="Scripts\assets\css\bootstrap-3.3.7-dist\css\bootstrap.min.css" />
+    <Content Include="Scripts\assets\css\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\assets\css\bootstrap-3.3.7-dist\js\bootstrap.js" />
+    <Content Include="Scripts\assets\css\bootstrap-3.3.7-dist\js\bootstrap.min.js" />
+    <Content Include="Scripts\assets\css\bootstrap-3.3.7-dist\js\npm.js" />
+    <Content Include="Scripts\assets\css\check-templates\blue.png" />
+    <Content Include="Scripts\assets\css\check-templates\elegant.png" />
+    <Content Include="Scripts\assets\css\Checkboxes.css" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Scripts\assets\css\googleicon.css" />
+    <Content Include="Scripts\assets\css\ng2-select.css" />
+    <Content Include="Scripts\assets\css\Site.css" />
+    <Content Include="Scripts\favicon.ico" />
+    <Content Include="Scripts\fontawesome-webfont.acf3dcb7ff752b5296ca.svg" />
+    <Content Include="Scripts\glyphicons-halflings-regular.89889688147bd7575d63.svg" />
+    <Content Include="Scripts\index.html" />
+    <Content Include="Scripts\inline.bundle.js" />
+    <Content Include="Scripts\main.bundle.js" />
+    <Content Include="Scripts\polyfills.bundle.js" />
+    <Content Include="Scripts\scripts.bundle.js" />
+    <Content Include="Scripts\styles.bundle.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -231,8 +270,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -246,6 +283,55 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Views\Home\SignIn.cshtml" />
+    <Content Include="Scripts\assets\css\bootstrap-3.3.7-dist\css\bootstrap-theme.css.map" />
+    <Content Include="Scripts\assets\css\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="Scripts\assets\css\bootstrap-3.3.7-dist\css\bootstrap.css.map" />
+    <Content Include="Scripts\assets\css\bootstrap-3.3.7-dist\css\bootstrap.min.css.map" />
+    <Content Include="Scripts\assets\css\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\assets\css\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Scripts\assets\css\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Scripts\assets\css\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\less\core.less" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\less\list.less" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\less\path.less" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="Scripts\assets\css\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Scripts\fontawesome-webfont.674f50d287a8c48dc19b.eot" />
+    <Content Include="Scripts\fontawesome-webfont.af7ae505a9eed503f8b8.woff2" />
+    <Content Include="Scripts\fontawesome-webfont.b06871f281fee6b241d6.ttf" />
+    <Content Include="Scripts\fontawesome-webfont.fee66e712a8a08eef580.woff" />
+    <Content Include="Scripts\glyphicons-halflings-regular.448c34a56d699c29117a.woff2" />
+    <Content Include="Scripts\glyphicons-halflings-regular.e18bbf611f2a2e43afc0.ttf" />
+    <Content Include="Scripts\glyphicons-halflings-regular.f4769f9bdb7466be6508.eot" />
+    <Content Include="Scripts\glyphicons-halflings-regular.fa2772327f55d8198301.woff" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
