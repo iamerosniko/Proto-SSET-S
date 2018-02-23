@@ -39,9 +39,24 @@ namespace Client.Controllers
 
         public string GetCurrentUser()
         {
-            var currentUser = Session["currentUser"].ToString();
+            var temp = Session["currentUser"];
+            string currentUser = "";
+            if (temp != null)
+            {
+
+                currentUser = temp.ToString();
+            }
+            else
+            {
+                goToSignIn();
+            }
 
             return currentUser;
+        }
+
+        public ActionResult goToSignIn()
+        {
+            return Redirect("Home/SignIn");
         }
     }
 }
