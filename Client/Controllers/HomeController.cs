@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace Client.Controllers
 {
-    public class HomeController : AsyncController
+    public class HomeController : Controller
     {
         private string _authToken;
         private HttpClient _client;
@@ -24,29 +24,36 @@ namespace Client.Controllers
                 _authToken = authSession.ToString();
             return View();
         }
-        public ActionResult SignIn()
+        public async Task<ActionResult> SignIn()
         {
             //request a post to IDP server to gain an AuthToken
+
             GetAuthentication();
-            //var data = ConfigurationSettings.AppSettings["ClientURL"];
             var data = ConfigurationManager.AppSettings["ClientURL"];
             ViewData["homepage"] = data;
             ViewData["sample"] = Session["authToken"];
+
+
+            //var data = ConfigurationSettings.AppSettings["ClientURL"];
             return View();
         }
 
-        public void GetAuthentication()
+
+
+
+        public async void GetAuthentication()
         {
             string authToken = "";
             ApiAccess api = new ApiAccess("Login");
-            var asyncTask = Task.Run(() =>
-            {
-                var temp = api.PostRequest("");
-                return temp.Result;
-            });
+            //var asyncTask = Task.Run(() =>
+            //{
+            //    var temp = api.PostRequest("");
+            //    return temp.Result;
+            //});
+            var asyncTask = await api.PostRequest("");
             //asyncTask.RunSynchronously();
 
-            authToken = asyncTask.Result == null ? "" : asyncTask.Result.Trim(new char[] { '\"' });
+            authToken = asyncTask == null ? "" : asyncTask.Trim(new char[] { '\"' });
             Session["authToken"] = authToken;
             GetCurrentUser(authToken);
         }

@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -32,12 +33,12 @@ namespace Client.Controllers
 
         public async Task<string> PostRequest(string body)
         {
-            var content = new StringContent(body, Encoding.UTF8, "application/json");
+            var content = new StringContent(body == null ? null : body, Encoding.UTF8, "application/json");
 
             try
             {
 
-                var request = body != "" ? await _client.PostAsync(_apiURL, content) : await _client.PostAsync(_apiURL, null);
+                var request = await _client.PostAsync(_apiURL, null);
 
                 if (request.IsSuccessStatusCode)
                 {
@@ -46,8 +47,9 @@ namespace Client.Controllers
                 }
                 return null;
             }
-            catch
+            catch (Exception ex)
             {
+                System.Diagnostics.Debug.Write(ex);
                 return null;
             }
         }
