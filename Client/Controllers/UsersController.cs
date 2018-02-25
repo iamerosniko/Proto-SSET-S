@@ -39,6 +39,7 @@ namespace Client.Controllers
 
         public string GetCurrentUser()
         {
+            //HttpContext.Session["authTOken"].ToString() ;
             var temp = Session["currentUser"];
             string currentUser = "";
             if (temp != null)

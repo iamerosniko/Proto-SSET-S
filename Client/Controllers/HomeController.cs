@@ -14,7 +14,8 @@ namespace Client.Controllers
         //private TokenFactory _tokenFactory;
         public ActionResult Index()
         {
-            var authSession = Session["authToken"];
+            var authSession = HttpContext.Session["authToken"];
+                //Session["authToken"];
             //_authToken = .ToString();
             if (authSession == null)
             {
@@ -64,6 +65,8 @@ namespace Client.Controllers
             //extract token
             CurrentUser user = tc.TokenToDetails(token);
             //save current user
+
+            //HttpContext.Session.
             Session["currentUser"] = JsonConvert.SerializeObject(user);
         }
     }

@@ -169,9 +169,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201802191755429_Initial.cs" />
-    <Compile Include="Migrations\201802191755429_Initial.Designer.cs">
-      <DependentUpon>201802191755429_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201802250507322_init.cs" />
+    <Compile Include="Migrations\201802250507322_init.Designer.cs">
+      <DependentUpon>201802250507322_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppToken.cs" />
@@ -193,8 +193,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201802191755429_Initial.resx">
-      <DependentUpon>201802191755429_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802250507322_init.resx">
+      <DependentUpon>201802250507322_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
