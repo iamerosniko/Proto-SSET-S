@@ -1,7 +1,7 @@
 ﻿using Client.Models;
 using Newtonsoft.Json;
+using System;
 using System.Configuration;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
@@ -10,7 +10,6 @@ namespace Client.Controllers
     public class HomeController : Controller
     {
         private string _authToken;
-        private HttpClient _client;
         //private TokenFactory _tokenFactory;
         public ActionResult Index()
         {
@@ -35,7 +34,7 @@ namespace Client.Controllers
             //request a post to IDP server to gain an AuthToken
             string authToken = "";
             ApiAccess api = new ApiAccess("Login");
-            var asyncTask = await api.PostRequest("");
+            var asyncTask = await api.PostRequest(JsonConvert.SerializeObject(new CurrentUser { UserID = Environment.UserName }));
 
             authToken = asyncTask == null ? null : asyncTask.Trim(new char[] { '\"' });
             Session["authToken"] = authToken;

@@ -13,10 +13,11 @@ namespace API.Controllers
         private CurrentUser currentUser;
         public string token;
         [HttpPost]
-        public string Authenticate()
+        public string Authenticate([FromBody] CurrentUser _user)
         {
             currentUser = new CurrentUser();
-            var username = Environment.UserName;
+            //var username = Environment.UserName;
+            var username = _user.UserID;
             var setUsersController = new SetUsersController();
             var setUserAccessController = new SetUserAccessesController();
             var setGroupsController = new SetGroupsController();

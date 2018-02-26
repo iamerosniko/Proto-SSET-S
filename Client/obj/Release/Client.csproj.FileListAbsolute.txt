@@ -51,3 +51,4 @@ C:\Users\alverer\Documents\GitHub\Proto-SSET-S\Client\bin\Microsoft.AI.Web.xml
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\Client\obj\Release\Client.csproj.CoreCompileInputs.cache
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\Client\obj\Release\Client.dll
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\Client\obj\Release\Client.pdb
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\Client\obj\Release\Client.csprojResolveAssemblyReference.cache

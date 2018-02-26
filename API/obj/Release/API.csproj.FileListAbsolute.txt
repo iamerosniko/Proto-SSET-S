@@ -43,8 +43,8 @@ C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\bin\System.Web.WebPages.Deplo
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\bin\System.Web.WebPages.Razor.xml
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\bin\System.Web.Http.WebHost.xml
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\obj\Release\API.csprojResolveAssemblyReference.cache
-C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\obj\Release\API.Migrations.Initial.resources
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\obj\Release\API.csproj.GenerateResource.Cache
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\obj\Release\API.csproj.CoreCompileInputs.cache
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\obj\Release\API.dll
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\obj\Release\API.pdb
+C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\obj\Release\API.Migrations.init.resources
