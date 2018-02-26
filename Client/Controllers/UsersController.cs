@@ -1,4 +1,5 @@
 ﻿using Client.Models;
+using Newtonsoft.Json;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
@@ -8,6 +9,8 @@ namespace Client.Controllers
 {
     public class UsersController : Controller
     {
+        private string _authToken;
+
         public CurrentUser TokenToDetails(string token)
         {
             CurrentUser currentUser = new CurrentUser();
@@ -55,9 +58,24 @@ namespace Client.Controllers
             return currentUser;
         }
 
+        public string GetToken()
+        {
+            _authToken = Session["authToken"].ToString();
+
+            AppToken appToken = new AppToken();
+            appToken = new AppToken { Token = _authToken, TokenName = "AuthToken" };
+
+            return JsonConvert.SerializeObject(appToken);
+        }
+
         public ActionResult goToSignIn()
         {
             return Redirect("Home/SignIn");
         }
+    }
+    public class AppToken
+    {
+        public string TokenName { get; set; }
+        public string Token { get; set; }
     }
 }

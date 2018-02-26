@@ -282,7 +282,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Views\Home\SignIn.cshtml" />
     <Content Include="Scripts\assets\css\bootstrap-3.3.7-dist\css\bootstrap-theme.css.map" />
     <Content Include="Scripts\assets\css\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css.map" />
     <Content Include="Scripts\assets\css\bootstrap-3.3.7-dist\css\bootstrap.css.map" />
@@ -333,6 +332,7 @@
     <Content Include="Scripts\glyphicons-halflings-regular.f4769f9bdb7466be6508.eot" />
     <Content Include="Scripts\glyphicons-halflings-regular.fa2772327f55d8198301.woff" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Views\Home\SignIn.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

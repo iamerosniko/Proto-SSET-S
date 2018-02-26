@@ -1,14 +1,15 @@
 ﻿
 @{
-    ViewData["Title"] = "You have successfully signed in to SKillset Database.";
+    ViewBag.Title = "SignIn";
+   
 }
 
 <h2>SignIn</h2>
 
-<script>
-    var homePage = '@ViewData["homepage"].ToString()';
-    window.setTimeout(function () {
-        window.location.href = homePage ;
-    }, 1500);
 
+<script>
+    var homepage = '@ViewData["homepage"].ToString()';
+    window.setTimeout(function () {
+        window.location.href = homepage;
+    },2000);
 </script>

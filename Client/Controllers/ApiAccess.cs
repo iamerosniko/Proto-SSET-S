@@ -38,7 +38,7 @@ namespace Client.Controllers
             try
             {
 
-                var request = await _client.PostAsync(_apiURL, null);
+                var request = await _client.PostAsync(_apiURL, content);
 
                 if (request.IsSuccessStatusCode)
                 {
