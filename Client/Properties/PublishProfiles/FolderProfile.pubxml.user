@@ -85,10 +85,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/22/2018 15:51:04</publishTime>
     </File>
     <File Include="bin/Client.dll">
-      <publishTime>02/26/2018 12:31:46</publishTime>
+      <publishTime>02/28/2018 08:39:48</publishTime>
     </File>
     <File Include="bin/Client.pdb">
-      <publishTime>02/26/2018 12:31:46</publishTime>
+      <publishTime>02/28/2018 08:39:48</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>02/22/2018 15:51:05</publishTime>
@@ -484,22 +484,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/23/2018 11:02:28</publishTime>
     </File>
     <File Include="Scripts/inline.bundle.js">
-      <publishTime>02/26/2018 11:18:48</publishTime>
+      <publishTime>02/26/2018 14:55:22</publishTime>
     </File>
     <File Include="Scripts/main.bundle.js">
-      <publishTime>02/26/2018 11:18:48</publishTime>
+      <publishTime>02/27/2018 10:52:18</publishTime>
     </File>
     <File Include="Scripts/polyfills.bundle.js">
-      <publishTime>02/26/2018 11:18:48</publishTime>
+      <publishTime>02/26/2018 14:55:22</publishTime>
     </File>
     <File Include="Scripts/scripts.bundle.js">
-      <publishTime>02/26/2018 11:18:48</publishTime>
+      <publishTime>02/26/2018 14:55:22</publishTime>
     </File>
     <File Include="Scripts/styles.bundle.css">
-      <publishTime>02/26/2018 08:32:33</publishTime>
+      <publishTime>02/26/2018 14:45:06</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>02/22/2018 15:51:04</publishTime>
+      <publishTime>02/27/2018 15:33:14</publishTime>
     </File>
     <File Include="Views/Home/SignIn.cshtml">
       <publishTime>02/26/2018 07:12:30</publishTime>
@@ -517,7 +517,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/22/2018 15:51:04</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/26/2018 12:31:51</publishTime>
+      <publishTime>02/27/2018 10:53:35</publishTime>
     </File>
   </ItemGroup>
 </Project>

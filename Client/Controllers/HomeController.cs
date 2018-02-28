@@ -15,7 +15,7 @@ namespace Client.Controllers
         {
 
             var authSession = HttpContext.Session["authToken"];
-
+            ViewData["authToken"] = authSession;
             if (authSession == null)
             {
                 return Redirect("Home/SignIn");
@@ -23,7 +23,7 @@ namespace Client.Controllers
             else
             {
                 _authToken = authSession.ToString();
-                GetCurrentUser(_authToken);
+                // GetCurrentUser(_authToken);
             }
             return View();
         }

@@ -16,10 +16,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/22/2018 15:51:05</publishTime>
     </File>
     <File Include="bin/API.dll">
-      <publishTime>02/26/2018 12:31:52</publishTime>
+      <publishTime>02/26/2018 15:50:14</publishTime>
     </File>
     <File Include="bin/API.pdb">
-      <publishTime>02/26/2018 12:31:52</publishTime>
+      <publishTime>02/26/2018 15:50:14</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>02/22/2018 15:51:05</publishTime>
