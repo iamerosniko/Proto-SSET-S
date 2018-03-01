@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2026
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{F9C20D07-0814-4E2E-BB26-F754595E7B38}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{D078978F-6AEC-4E53-B822-549A300370D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillsetClient", "SkillsetClient\SkillsetClient.csproj", "{C1C93D19-C6CD-4777-B13D-4FCC32BC1A2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D078978F-6AEC-4E53-B822-549A300370D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D078978F-6AEC-4E53-B822-549A300370D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D078978F-6AEC-4E53-B822-549A300370D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1C93D19-C6CD-4777-B13D-4FCC32BC1A2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1C93D19-C6CD-4777-B13D-4FCC32BC1A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1C93D19-C6CD-4777-B13D-4FCC32BC1A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1C93D19-C6CD-4777-B13D-4FCC32BC1A2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

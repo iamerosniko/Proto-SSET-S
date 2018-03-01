@@ -85,10 +85,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/22/2018 15:51:04</publishTime>
     </File>
     <File Include="bin/Client.dll">
-      <publishTime>02/28/2018 08:39:48</publishTime>
+      <publishTime>02/28/2018 15:20:18</publishTime>
     </File>
     <File Include="bin/Client.pdb">
-      <publishTime>02/28/2018 08:39:48</publishTime>
+      <publishTime>02/28/2018 15:20:18</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>02/22/2018 15:51:05</publishTime>
@@ -499,10 +499,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/26/2018 14:45:06</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>02/27/2018 15:33:14</publishTime>
+      <publishTime>02/28/2018 13:34:57</publishTime>
     </File>
     <File Include="Views/Home/SignIn.cshtml">
-      <publishTime>02/26/2018 07:12:30</publishTime>
+      <publishTime>02/28/2018 15:20:09</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>02/22/2018 15:51:04</publishTime>
@@ -517,7 +517,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/22/2018 15:51:04</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/27/2018 10:53:35</publishTime>
+      <publishTime>02/28/2018 12:16:33</publishTime>
     </File>
   </ItemGroup>
 </Project>

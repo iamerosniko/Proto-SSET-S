@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 
 namespace Client
 {
     public static class WebApiConfig
     {
+
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
@@ -19,6 +17,9 @@ namespace Client
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
         }
     }
+
+
 }

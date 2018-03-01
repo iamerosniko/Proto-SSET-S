@@ -1,37 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+using System.Web;
 using System.Web.Http;
 
 namespace Client.Controllers
 {
     public class ValuesController : ApiController
     {
-        // GET api/values
+        // GET: api/Values
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/values/5
+        // GET: api/Values/5
         public string Get(int id)
         {
-            return "value";
+            try
+            {
+                var session = HttpContext.Current.Session;
+
+                if (session["Time"] == null)
+                    session["Time"] = DateTime.Now;
+
+                return "Session Time: " + session["Time"] + id;
+
+            }
+            catch (Exception ex)
+            {
+                return ex.ToString();
+            }
+
         }
 
-        // POST api/values
+        // POST: api/Values
         public void Post([FromBody]string value)
         {
         }
 
-        // PUT api/values/5
+        // PUT: api/Values/5
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE api/values/5
+        // DELETE: api/Values/5
         public void Delete(int id)
         {
         }

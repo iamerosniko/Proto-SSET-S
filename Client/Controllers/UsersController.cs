@@ -43,7 +43,7 @@ namespace Client.Controllers
         public string GetCurrentUser()
         {
             //HttpContext.Session["authTOken"].ToString() ;
-            var temp = Session["currentUser"];
+            var temp = System.Web.HttpContext.Current.Session["currentUser"];
             string currentUser = "";
             if (temp != null)
             {
@@ -60,7 +60,7 @@ namespace Client.Controllers
 
         public string GetToken()
         {
-            _authToken = Session["authToken"].ToString();
+            _authToken = System.Web.HttpContext.Current.Session["authToken"].ToString();
 
             AppToken appToken = new AppToken();
             appToken = new AppToken { Token = _authToken, TokenName = "AuthToken" };
