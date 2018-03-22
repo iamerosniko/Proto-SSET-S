@@ -30,7 +30,7 @@ namespace API.Controllers
             {
                 return NotFound();
             }
-
+            associate.AssociateID = 1;
             return Ok(associate);
         }
 

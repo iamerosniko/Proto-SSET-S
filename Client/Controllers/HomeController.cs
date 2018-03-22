@@ -20,18 +20,16 @@ namespace Client.Controllers
         private string _user;
         private string _result;
         //private TokenFactory _tokenFactory;
-        public async Task<ActionResult> Index()
+        public  ActionResult Index()
         {
             _user = HttpContext.User.Identity.Name.ToString();
-            _user = _user.StartsWith("PRD") ? _user.Substring(3) : _user;
-            _user = _user.StartsWith("MLIDDOMAIN1") || _user.StartsWith("MLIDDOMAIN2") ? _user.Substring(10) : _user;
-            ViewData["authToken"] = _user;
+            ViewData["authToken"] = _user==null ? "null" : _user ;
+
             _client = new HttpClient();
             _apiURL = ConfigurationManager.AppSettings["ClientURL"];
             try
             {
-
-                var request = await _client.GetAsync(_apiURL + "api/books/authToken");
+                var request =  _client.GetAsync(_apiURL + "api/books/authToken").Result;
                 if (request.IsSuccessStatusCode)
                 {
                     _result = request.Content.ReadAsStringAsync().Result;
@@ -59,10 +57,7 @@ namespace Client.Controllers
         public async Task<ActionResult> SignIn()
         {
             _user = HttpContext.User.Identity.Name.ToString();
-            _user = _user.StartsWith("PRD") ? _user.Substring(3) : _user;
-            _user = _user.StartsWith("MLIDDOMAIN1") || _user.StartsWith("MLIDDOMAIN2") ? _user.Substring(10) : _user;
-
-            _user = "alverer";
+            
             var data = ConfigurationManager.AppSettings["ClientURL"];
             ViewData["homepage"] = data;
             //request a post to IDP server to gain an AuthToken
@@ -87,8 +82,6 @@ namespace Client.Controllers
                 var _result = request.Content.ReadAsStringAsync().Result;
                 TempData["res"] = _result;
             }
-
-
 
 
             //System.Web.HttpContext.Current.Session["authToken"] = authToken;

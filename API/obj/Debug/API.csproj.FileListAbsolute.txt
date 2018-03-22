@@ -87,8 +87,6 @@ C:\Users\zEROSeven\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.csprojResolve
 C:\Users\zEROSeven\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.csproj.CoreCompileInputs.cache
 C:\Users\zEROSeven\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.dll
 C:\Users\zEROSeven\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.pdb
-C:\Users\zEROSeven\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.Migrations.init.resources
-C:\Users\zEROSeven\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.csproj.GenerateResource.Cache
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\bin\API.dll.config
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\bin\API.dll
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\bin\API.pdb
@@ -139,3 +137,6 @@ C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.csproj.Generate
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.csproj.CoreCompileInputs.cache
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.dll
 C:\Users\alverer\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.pdb
+C:\Users\zEROSeven\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.csproj.CopyComplete
+C:\Users\zEROSeven\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.Migrations.InitialCreate.resources
+C:\Users\zEROSeven\Documents\GitHub\Proto-SSET-S\API\obj\Debug\API.csproj.GenerateResource.cache

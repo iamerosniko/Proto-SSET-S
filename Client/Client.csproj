@@ -337,6 +337,7 @@
     <Content Include="Scripts\glyphicons-halflings-regular.fa2772327f55d8198301.woff" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="Views\Home\SignIn.cshtml" />
+    <None Include="Properties\PublishProfiles\SkillsetTrackerClient - Web Deploy.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

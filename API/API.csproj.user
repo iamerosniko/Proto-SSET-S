@@ -19,8 +19,9 @@
     <WebStackScaffolding_DbContextTypeFullName>API.Entities.SkillSetContext</WebStackScaffolding_DbContextTypeFullName>
     <_SelectedScaffolderID>ApiControllerWithContextScaffolder</_SelectedScaffolderID>
     <_SelectedScaffolderCategoryPath>root/Common/Web API</_SelectedScaffolderCategoryPath>
-    <NameOfLastUsedPublishProfile>FolderProfile</NameOfLastUsedPublishProfile>
-    <ProjectView>ShowAllFiles</ProjectView>
+    <NameOfLastUsedPublishProfile>SkillsetTrackerAPI - Web Deploy</NameOfLastUsedPublishProfile>
+    <ProjectView>ProjectFiles</ProjectView>
+    <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

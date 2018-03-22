@@ -16,20 +16,7 @@ namespace Client.Controllers
         // GET: api/Values/5
         public string Get(int id)
         {
-            try
-            {
-                var session = HttpContext.Current.Session;
-
-                if (session["Time"] == null)
-                    session["Time"] = DateTime.Now;
-
-                return "Session Time: " + session["Time"] + id;
-
-            }
-            catch (Exception ex)
-            {
-                return ex.ToString();
-            }
+            return HttpContext.Current.User.Identity.Name;
 
         }
 
